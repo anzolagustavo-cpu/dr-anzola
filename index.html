@@ -1,57 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Anzola - Medicina Integral</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Anzola | Cardiólogo Clínico - Centro Médico La Fe</title>
+    <meta name="description" content="Consulta médica de Cardiología Clínica con el Dr. Anzola en el Centro Médico La Fe, Urb. Jorge Coll. Atención especializada para el cuidado de su corazón.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Dr. Juan Anzola</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+
+    <!-- BARRA SUPERIOR DE CONTACTO RÁPIDO -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span class="location-tag">📍 Centro Médico La Fe, Urb. Jorge Coll</span>
+            <div class="top-phones">
+                <span>📞 Citas:</span>
+                <a href="tel:04143954757">0414-395.47.57</a> | 
+                <a href="tel:04161945611">0416-194.56.11</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-symbol">❤️</div>
+                <div class="logo-text">
+                    <span class="doctor-name">Dr. Anzola</span>
+                    <span class="doctor-spec">Cardiólogo Clínico</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#ubicacion">Ubicación</a>
+                <a href="https://wa.me/584143954757?text=Hola%20Dr.%20Anzola,%20deseo%20agendar%20una%20consulta%20cardiol%C3%B3gica" target="_blank" class="btn-cita-header">Agendar Cita</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Especialista en medicina familiar con más de 15 años de experiencia atendiendo a la comunidad.</p>
+    <!-- SECCIÓN HERO PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge-medico">🩺 Atención Cardiológica Integral</div>
+                <h1>Cuidado experto y de confianza para su <span>corazón</span></h1>
+                <p class="hero-desc">
+                    Diagnóstico, tratamiento y seguimiento especializado de enfermedades cardiovasculares. Dedicado a proteger la salud y calidad de vida de cada paciente con calidez y excelencia médica.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/584143954757?text=Hola%20Dr.%20Anzola,%20deseo%20agendar%20una%20consulta%20cardiol%C3%B3gica" target="_blank" class="btn-whatsapp">
+                        <span class="wa-icon">💬</span> Agendar por WhatsApp
+                    </a>
+                    <a href="tel:04143954757" class="btn-call">
+                        📞 Llamar para Cita
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span> Evaluación completa
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span> Citas programadas
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span> Trato personalizado
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="medical-summary-box">
+                    <div class="card-icon">🫀</div>
+                    <h3>Consultorio Cardiológico</h3>
+                    <p class="clinic-sub">Centro Médico La Fe</p>
+                    <hr>
+                    <div class="info-row">
+                        <span class="info-title">Especialidad:</span>
+                        <span class="info-val">Cardiología Clínica</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-title">Ubicación:</span>
+                        <span class="info-val">Urb. Jorge Coll</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-title">Teléfonos:</span>
+                        <span class="info-val">0414-395.47.57<br>0416-194.56.11</span>
+                    </div>
+                    <a href="https://wa.me/584161945611?text=Hola%20Dr.%20Anzola,%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20citas" target="_blank" class="btn-secondary-wa">
+                        Escribir al 0416-194.56.11
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Consulta general</li>
-            <li>Chequeos preventivos</li>
-            <li>Atención a pacientes crónicos</li>
-        </ul>
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Servicios y Tratamientos</h2>
+                <p>Atención médica especializada orientada a la prevención, control y diagnóstico oportuno.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="s-icon">🩺</div>
+                    <h3>Consulta Cardiológica Integral</h3>
+                    <p>Evaluación médica exhaustiva para el diagnóstico y tratamiento de afecciones del sistema cardiovascular.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">📈</div>
+                    <h3>Electrocardiograma (ECG)</h3>
+                    <p>Registro y estudio preciso de la actividad eléctrica cardíaca para detectar arritmias e isquemias.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">📋</div>
+                    <h3>Evaluación Preoperatoria</h3>
+                    <p>Valoración de riesgo quirúrgico y cardiovascular para pacientes que serán sometidos a procedimientos médicos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">❤️</div>
+                    <h3>Control de Hipertensión Arterial</h3>
+                    <p>Manejo especializado para regular la presión arterial y prevenir complicaciones cardiovasculares y renales.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">🛡️</div>
+                    <h3>Prevención Cardiovascular</h3>
+                    <p>Chequeos preventivos para pacientes con factores de riesgo (diabetes, colesterol alto, antecedentes familiares).</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">💊</div>
+                    <h3>Control de Cardiopatías</h3>
+                    <p>Seguimiento continuo de insuficiencia cardíaca, arritmias, cardiopatía isquémica y patologías crónicas.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form id="contact-form" onsubmit="handleSubmit(event)">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required />
+    <!-- SECCIÓN DE UBICACIÓN Y CONTACTO -->
+    <section id="ubicacion" class="ubicacion">
+        <div class="container">
+            <div class="ubicacion-box">
+                <div class="ubicacion-info">
+                    <h2>Consultorio y Citas</h2>
+                    <p class="ub-sub">Coordine su consulta de forma rápida llamando o escribiendo por WhatsApp.</p>
+                    
+                    <div class="contact-block">
+                        <div class="c-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Lugar de Consulta:</strong>
+                                <p>Centro Médico La Fe, Urb. Jorge Coll.</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <span class="icon">📱</span>
+                            <div>
+                                <strong>Teléfonos para Citas:</strong>
+                                <p>
+                                    <a href="tel:04143954757">0414-395.47.57</a> (Llamadas y WhatsApp)<br>
+                                    <a href="tel:04161945611">0416-194.56.11</a> (Llamadas y WhatsApp)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <span class="icon">⏰</span>
+                            <div>
+                                <strong>Modalidad:</strong>
+                                <p>Previa cita programada.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <label for="email">Correo:</label>
-            <input type="email" id="email" name="email" required />
+                    <div class="wa-buttons-group">
+                        <a href="https://wa.me/584143954757?text=Hola%20Dr.%20Anzola,%20deseo%20agendar%20una%20cita%20m%C3%A9dica" target="_blank" class="btn-whatsapp">
+                            WhatsApp: 0414-395.47.57
+                        </a>
+                        <a href="https://wa.me/584161945611?text=Hola%20Dr.%20Anzola,%20deseo%20agendar%20una%20cita%20m%C3%A9dica" target="_blank" class="btn-whatsapp">
+                            WhatsApp: 0416-194.56.11
+                        </a>
+                    </div>
+                </div>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-        <div id="form-result"></div>
+                <!-- Formulario de Consulta Rápida -->
+                <div class="form-wrapper">
+                    <h3>Enviar un mensaje directo</h3>
+                    <p class="form-sub">Escriba su consulta o solicitud de cita:</p>
+                    <form id="contact-form" onsubmit="handleMedicalForm(event)">
+                        <div class="form-group">
+                            <label for="name">Nombre y Apellido</label>
+                            <input type="text" id="name" required placeholder="Ej. Carlos Mendoza">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono de Contacto</label>
+                            <input type="tel" id="phone" required placeholder="Ej. 0414-1234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="motivo">Motivo de Consulta</label>
+                            <select id="motivo" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Consulta General">Primera Consulta Cardiológica</option>
+                                <option value="Control Hipertension">Control de Hipertensión</option>
+                                <option value="Preoperatorio">Evaluación Preoperatoria / Riesgo</option>
+                                <option value="Electrocardiograma">Electrocardiograma</option>
+                                <option value="Chequeo">Chequeo Preventivo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje o Comentarios (Opcional)</label>
+                            <textarea id="message" rows="3" placeholder="Indique si tiene algún síntoma o preferencia de fecha"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Consulta por WhatsApp 💬</button>
+                    </form>
+                    <div id="form-result"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Dr. Juan Anzola. Todos los derechos reservados.</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p><strong>Dr. Anzola</strong> — Cardiólogo Clínico | Centro Médico La Fe, Urb. Jorge Coll.</p>
+            <p class="footer-copy">© 2026 Todos los derechos reservados. Cuidado médico profesional.</p>
+        </div>
     </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/584143954757?text=Hola%20Dr.%20Anzola,%20deseo%20agendar%20una%20consulta%20cardiol%C3%B3gica" target="_blank" class="float-wa" title="Escribir por WhatsApp">
+        💬
+    </a>
 
     <script src="script.js"></script>
 </body>
