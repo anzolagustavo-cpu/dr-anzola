@@ -1,4 +1,4 @@
-// SCRIPT.JS - Dr. Anzola | Cardiología Clínica
+// SCRIPT.JS - Dr. Gustavo Anzola MuñozTébar | Cardiología Clínica
 
 function handleMedicalForm(event) {
     event.preventDefault();
@@ -10,7 +10,7 @@ function handleMedicalForm(event) {
     const resultDiv = document.getElementById('form-result');
 
     // Mensaje pre-armado para WhatsApp
-    let waMessage = `Hola Dr. Anzola, solicito información para una cita médica:\n`;
+    let waMessage = `Hola Dr. Gustavo Anzola MuñozTébar, solicito información para una cita médica:\n`;
     waMessage += `👤 Nombre: ${name}\n`;
     waMessage += `📱 Teléfono: ${phone}\n`;
     waMessage += `🩺 Motivo: ${motivo}\n`;
