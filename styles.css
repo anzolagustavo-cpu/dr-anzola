@@ -4,7 +4,6 @@
     --primary-dark: #0a2d4d;
     --primary-light: #e0f2fe;
     --accent: #b91c1c;          /* Rojo corazón noble */
-    --accent-gold: #c29d59;     /* Tono dorado bioético / distinción académica */
     --whatsapp: #25D366;
     --whatsapp-dark: #1ebc59;
     --text-dark: #1e293b;
@@ -13,6 +12,9 @@
     --bg-subtle: #f1f5f9;
     --white: #ffffff;
     --border-color: #e2e8f0;
+    --verde-semaforo: #16a34a;
+    --amarillo-semaforo: #d97706;
+    --rojo-semaforo: #dc2626;
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
@@ -40,7 +42,7 @@ body {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -81,7 +83,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 0.85rem 1.5rem;
 }
 .logo {
     display: flex;
@@ -98,7 +100,7 @@ body {
     flex-direction: column;
 }
 .doctor-name {
-    font-size: 1.25rem;
+    font-size: 1.22rem;
     font-weight: 800;
     color: var(--primary-dark);
     line-height: 1.2;
@@ -118,22 +120,26 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.15rem;
 }
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     transition: color 0.2s;
 }
 .nav-links a:hover {
     color: var(--primary);
 }
+.nav-highlight {
+    color: #b45309 !important;
+    font-weight: 700 !important;
+}
 .btn-cita-header {
     background-color: var(--primary);
     color: var(--white) !important;
-    padding: 0.55rem 1.25rem;
+    padding: 0.55rem 1.15rem;
     border-radius: var(--radius-sm);
     font-weight: 700 !important;
     transition: background-color 0.2s, transform 0.2s !important;
@@ -202,11 +208,28 @@ body {
     gap: 1rem;
     margin-bottom: 2.25rem;
 }
+.btn-semaforo-hero {
+    background-color: #0d9488;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+    transition: all 0.2s;
+}
+.btn-semaforo-hero:hover {
+    background-color: #0f766e;
+    transform: translateY(-2px);
+}
 .btn-whatsapp {
     background-color: var(--whatsapp);
     color: var(--white);
     text-decoration: none;
-    padding: 0.85rem 1.6rem;
+    padding: 0.85rem 1.5rem;
     border-radius: var(--radius-sm);
     font-weight: 700;
     display: inline-flex;
@@ -219,27 +242,13 @@ body {
     background-color: var(--whatsapp-dark);
     transform: translateY(-2px);
 }
-.btn-outline {
-    background-color: var(--white);
-    color: var(--primary-dark);
-    text-decoration: none;
-    padding: 0.85rem 1.5rem;
-    border-radius: var(--radius-sm);
-    font-weight: 700;
-    border: 2px solid var(--primary);
-    transition: all 0.2s;
-}
-.btn-outline:hover {
-    background-color: var(--primary);
-    color: var(--white);
-}
 .hero-badges {
     display: flex;
     gap: 0.85rem;
     flex-wrap: wrap;
 }
 .badge-pill {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.85);
     border: 1px solid #cbd5e1;
     font-size: 0.85rem;
     font-weight: 700;
@@ -255,7 +264,6 @@ body {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
-    position: relative;
 }
 .card-header-badge {
     display: inline-block;
@@ -399,7 +407,7 @@ body {
 }
 .section-header {
     text-align: center;
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto 3.5rem;
 }
 .section-header h2 {
@@ -493,6 +501,291 @@ body {
 }
 .compromiso-banner strong {
     color: #93c5fd;
+}
+
+/* GUÍA PRÁCTICA DE PREVENCIÓN ARTERIAL */
+.guia-section {
+    padding: 5.5rem 0;
+    background: var(--white);
+}
+.endotelio-callout {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+}
+.guia-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.guia-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.guia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background: #ffffff;
+}
+.card-alert {
+    border-left: 5px solid var(--accent);
+    background: #fffafa;
+}
+.guia-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+.guia-card-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+.guia-step {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+}
+.guia-card-header h3 {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    font-weight: 800;
+    line-height: 1.2;
+}
+.guia-motto {
+    font-size: 0.88rem;
+    color: var(--accent);
+    font-weight: 600;
+    display: block;
+}
+.guia-intro {
+    font-size: 0.98rem;
+    color: #334155;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.guia-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+.guia-list li {
+    font-size: 0.93rem;
+    color: #475569;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+}
+.guia-list li::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+}
+
+/* HERRAMIENTA INTERACTIVA: EL SEMÁFORO DE HÁBITOS */
+.semaforo-section {
+    padding: 5.5rem 0;
+    background: linear-gradient(135deg, #09233f 0%, #0f4c81 100%);
+    color: #ffffff;
+}
+.semaforo-box {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: var(--text-dark);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.semaforo-intro {
+    text-align: center;
+    margin-bottom: 2.75rem;
+}
+.badge-tool {
+    display: inline-block;
+    background: #fef3c7;
+    color: #b45309;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 0.75rem;
+}
+.semaforo-intro h2 {
+    font-size: 2.4rem;
+    color: var(--primary-dark);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.tool-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+.pregunta-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.pregunta-label {
+    display: block;
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+.q-icon {
+    margin-right: 0.35rem;
+}
+.opciones-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+.opcion-radio {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    background: var(--white);
+    border: 1.5px solid #cbd5e1;
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+}
+.opcion-radio:hover {
+    border-color: var(--primary);
+    background: #f0f7ff;
+}
+.opcion-radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+}
+.btn-evaluar-semaforo {
+    width: 100%;
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 1.15rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.15rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(13, 148, 136, 0.35);
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+.btn-evaluar-semaforo:hover {
+    background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.45);
+}
+
+/* PANELES DE RESULTADO DEL SEMÁFORO */
+.semaforo-resultado-panel {
+    margin-top: 2.5rem;
+    border-radius: var(--radius-md);
+    padding: 2.25rem;
+    border: 2px solid;
+    animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.resultado-verde {
+    background: #f0fdf4;
+    border-color: #22c55e;
+    color: #14532d;
+}
+.resultado-amarillo {
+    background: #fffbeb;
+    border-color: #f59e0b;
+    color: #78350f;
+}
+.resultado-rojo {
+    background: #fef2f2;
+    border-color: #ef4444;
+    color: #7f1d1d;
+}
+.semaforo-badge-res {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+.badge-verde-bg { background-color: var(--verde-semaforo); }
+.badge-amarillo-bg { background-color: var(--amarillo-semaforo); }
+.badge-rojo-bg { background-color: var(--rojo-semaforo); }
+
+.resultado-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+.resultado-texto {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+.resultado-consejo-box {
+    background: rgba(255,255,255,0.7);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.98rem;
+    border: 1px dashed rgba(0,0,0,0.15);
+}
+.resultado-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary);
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm);
+    transition: transform 0.2s, background-color 0.2s;
+}
+.resultado-cta-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* SERVICIOS */
@@ -740,8 +1033,8 @@ body {
     .manifiesto-wrapper {
         padding: 2rem;
     }
-    .manifiesto-header h2 {
-        font-size: 2rem;
+    .semaforo-box {
+        padding: 2rem;
     }
     .nav-links {
         display: none;
